@@ -21,7 +21,7 @@ module.exports = (ctx, next) => {
 
 	/** @type { import('../../typings/context').ExtendedContext } */
 	const cbCtx = new Context(cbUpdate, ctx.tg, ctx.options);
-	Object.assign(cbCtx, contextCustomizations);
+	Object.assign(cbCtx, contextCustomizations.extn);
 	cbCtx.botInfo = ctx.botInfo;
 
 	cbCtx.reply = ctx.editMessageText.bind(ctx);
